@@ -217,7 +217,7 @@ ul { list-style: none; }
   width: 25px; height: 3px;
   background: var(--white);
   border-radius: 3px;
-  transition: var(--transition);
+  transition: background var(--transition), transform var(--transition), opacity var(--transition);
 }
 
 .navbar.scrolled .hamburger span { background: var(--dark); }
@@ -1067,9 +1067,11 @@ ul { list-style: none; }
   font-size: 1.6rem;
   box-shadow: 0 6px 24px rgba(37,211,102,0.45);
   transition: transform var(--transition), box-shadow var(--transition);
+  will-change: transform;
+  transform: translateZ(0);
 }
 
-.float-whatsapp:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.55); }
+.float-whatsapp:hover { transform: translateZ(0) scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.55); }
 
 .float-tooltip {
   position: absolute;
@@ -1107,6 +1109,8 @@ ul { list-style: none; }
   pointer-events: none;
   transition: opacity var(--transition), background var(--transition);
   box-shadow: var(--shadow);
+  will-change: opacity;
+  transform: translateZ(0);
 }
 
 .back-to-top.visible { opacity: 1; pointer-events: all; }

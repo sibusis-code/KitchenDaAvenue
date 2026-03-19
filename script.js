@@ -6,17 +6,23 @@
 const navbar = document.getElementById('navbar');
 const backToTop = document.getElementById('backToTop');
 
+// Throttle scroll via requestAnimationFrame — prevents jank on fixed elements
+let scrollTicking = false;
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    navbar.classList.add('scrolled');
-    backToTop.classList.add('visible');
-  } else {
-    navbar.classList.remove('scrolled');
-    backToTop.classList.remove('visible');
+  if (!scrollTicking) {
+    requestAnimationFrame(() => {
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+        backToTop.classList.add('visible');
+      } else {
+        navbar.classList.remove('scrolled');
+        backToTop.classList.remove('visible');
+      }
+      highlightActiveNav();
+      scrollTicking = false;
+    });
+    scrollTicking = true;
   }
-
-  // Active nav link highlight
-  highlightActiveNav();
 });
 
 backToTop.addEventListener('click', () => {

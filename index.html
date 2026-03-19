@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitchen Da Avenue | Catering Services</title>
+  <meta name="description" content="Kitchen Da Avenue – Premium catering for corporate events, weddings, private parties, funerals and more. Snack Something extraordinary." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="logo.jpeg" alt="Kitchen Da Avenue Logo" class="logo-img" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://wa.me/27000000000?text=Hello%20Kitchen%20Da%20Avenue%2C%20I%20would%20like%20to%20make%20a%20booking." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Book Now
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-brand">
+        <img src="logo.jpeg" alt="Kitchen Da Avenue Logo" class="hero-logo" />
+      </div>
+      <h1 class="hero-business-name">
+        <span class="brand-kitchen">Kitchen</span>
+        <span class="brand-da-avenue">Da Avenue</span>
+      </h1>
+      <p class="hero-tagline">Snack Something Extraordinary</p>
+      <p class="hero-sub">From intimate private dinners to grand corporate events — we deliver memorable culinary experiences tailored to every occasion.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn btn-primary">Our Services</a>
+        <a href="https://wa.me/27000000000?text=Hello%20Kitchen%20Da%20Avenue%2C%20I%20would%20like%20to%20enquire%20about%20catering." class="btn btn-whatsapp-outline" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ===== ANNOUNCEMENT STRIP ===== -->
+  <div class="strip">
+    <div class="strip-inner">
+      <span><i class="fas fa-star"></i> Corporate Events</span>
+      <span><i class="fas fa-star"></i> Weddings</span>
+      <span><i class="fas fa-star"></i> Private Parties</span>
+      <span><i class="fas fa-star"></i> Funerals &amp; Memorial Services</span>
+      <span><i class="fas fa-star"></i> Birthday Celebrations</span>
+      <span><i class="fas fa-star"></i> Year-End Functions</span>
+      <span><i class="fas fa-star"></i> Cocktail Events</span>
+      <span><i class="fas fa-star"></i> Corporate Events</span>
+      <span><i class="fas fa-star"></i> Weddings</span>
+      <span><i class="fas fa-star"></i> Private Parties</span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-image-wrap">
+        <div class="about-img-frame">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=700&q=80" alt="Chef preparing food" loading="lazy" />
+        </div>
+        <div class="about-badge">
+          <span class="badge-number">10+</span>
+          <span class="badge-text">Years of<br/>Excellence</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">Who We Are</span>
+        <h2>A Taste of Elegance,<br/>Every Time</h2>
+        <p>Kitchen Da Avenue is a premier catering company dedicated to bringing exceptional food and flawless service to every event. Whether you are hosting an intimate gathering or a large-scale corporate function, our team of professional chefs and event specialists ensure that every detail is perfectly executed.</p>
+        <p>We pride ourselves on using the freshest ingredients, crafting innovative menus, and delivering an experience that exceeds expectations — every single time.</p>
+        <ul class="about-features">
+          <li><i class="fas fa-check-circle"></i> Professional, uniformed service staff</li>
+          <li><i class="fas fa-check-circle"></i> Custom menu planning &amp; dietary accommodations</li>
+          <li><i class="fas fa-check-circle"></i> Full setup &amp; breakdown included</li>
+          <li><i class="fas fa-check-circle"></i> Serving corporate &amp; private clients across the region</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2>Our Catering Services</h2>
+        <p>Tailored catering solutions for every occasion, delivered with professionalism and passion.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card" data-delay="0">
+          <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Corporate Events</h3>
+          <p>Board meetings, conferences, year-end functions, product launches — we handle all corporate catering needs with precision and professionalism.</p>
+          <a href="https://wa.me/27000000000?text=Hello%2C%20I%20need%20catering%20for%20a%20corporate%20event." class="service-link" target="_blank" rel="noopener">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="100">
+          <div class="service-icon"><i class="fas fa-rings-wedding"></i></div>
+          <h3>Weddings</h3>
+          <p>Your special day deserves perfection. We craft bespoke wedding menus and deliver impeccable service to make your celebration unforgettable.</p>
+          <a href="https://wa.me/27000000000?text=Hello%2C%20I%20need%20catering%20for%20a%20wedding." class="service-link" target="_blank" rel="noopener">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="200">
+          <div class="service-icon"><i class="fas fa-birthday-cake"></i></div>
+          <h3>Private Parties</h3>
+          <p>Birthday celebrations, anniversaries, baby showers and private dinners — we bring restaurant-quality food directly to your event.</p>
+          <a href="https://wa.me/27000000000?text=Hello%2C%20I%20need%20catering%20for%20a%20private%20party." class="service-link" target="_blank" rel="noopener">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="300">
+          <div class="service-icon"><i class="fas fa-dove"></i></div>
+          <h3>Funerals &amp; Memorials</h3>
+          <p>We provide compassionate, dignified catering services for funeral receptions and memorial gatherings, allowing families to focus on what matters most.</p>
+          <a href="https://wa.me/27000000000?text=Hello%2C%20I%20need%20catering%20for%20a%20funeral%20or%20memorial." class="service-link" target="_blank" rel="noopener">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="400">
+          <div class="service-icon"><i class="fas fa-cocktail"></i></div>
+          <h3>Cocktail &amp; Networking</h3>
+          <p>Elegant finger foods, canapés, and beverage stations designed to keep your guests mingling in style at any networking or cocktail event.</p>
+          <a href="https://wa.me/27000000000?text=Hello%2C%20I%20need%20catering%20for%20a%20cocktail%20event." class="service-link" target="_blank" rel="noopener">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="500">
+          <div class="service-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Custom Menus</h3>
+          <p>Have a specific vision? Our chefs work closely with you to craft a custom menu that reflects your taste, culture, and dietary requirements.</p>
+          <a href="mailto:info@kitchendaavenue.co.za?subject=Custom%20Menu%20Enquiry" class="service-link">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+        <p>Events Catered</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="50">0</span><span class="stat-suffix">k+</span>
+        <p>Guests Served</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+        <p>Client Satisfaction</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Work</span>
+        <h2>Event Gallery</h2>
+        <p>A curated look at the events we have had the privilege to serve.</p>
+      </div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall" style="background-image:url('https://images.unsplash.com/photo-1478146059778-26028b07395a?w=600&q=80')"><div class="gallery-overlay"><span>Corporate Luncheon</span></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80')"><div class="gallery-overlay"><span>Wedding Reception</span></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')"><div class="gallery-overlay"><span>Plated Dinner Service</span></div></div>
+      <div class="gallery-item wide" style="background-image:url('https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=900&q=80')"><div class="gallery-overlay"><span>Grazing Table Display</span></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80')"><div class="gallery-overlay"><span>Cocktail Evening</span></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=600&q=80')"><div class="gallery-overlay"><span>Dessert Station</span></div></div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Client Reviews</span>
+        <h2>What Our Clients Say</h2>
+        <p>We measure our success by the smiles we create.</p>
+      </div>
+      <div class="testimonials-slider">
+
+        <div class="testimonial-card active">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Kitchen Da Avenue catered our company's annual year-end function and absolutely blew everyone away. The food was outstanding and the service team was incredibly professional. We will definitely be using them again!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+            <div>
+              <strong>Thabo Mokoena</strong>
+              <span>HR Director, Apex Solutions</span>
+            </div>
+          </div>
+          <div class="star-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Our wedding day was made even more special by the incredible catering from Kitchen Da Avenue. Every dish was beautifully presented and tasted amazing. Our guests could not stop raving about the food!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+            <div>
+              <strong>Nomvula &amp; Sipho Dlamini</strong>
+              <span>Newlyweds</span>
+            </div>
+          </div>
+          <div class="star-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"During a difficult time, Kitchen Da Avenue provided compassionate and dignified catering for our family's memorial service. The food was comforting, plentiful, and beautifully arranged. Truly grateful."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+            <div>
+              <strong>Zanele Khumalo</strong>
+              <span>Private Client</span>
+            </div>
+          </div>
+          <div class="star-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"We hired Kitchen Da Avenue for our product launch cocktail event — they set up the most elegant food stations. Professional from start to finish. Highly recommended for any corporate function."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+            <div>
+              <strong>Rethabile Nkosi</strong>
+              <span>Marketing Manager, TrendBridge</span>
+            </div>
+          </div>
+          <div class="star-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Ready to Plan Your Event?</h2>
+        <p>Contact us today and let's create a culinary experience your guests will never forget.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/27000000000?text=Hello%20Kitchen%20Da%20Avenue%2C%20I%20would%20like%20to%20make%20a%20booking." class="btn btn-whatsapp-solid" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <a href="mailto:info@kitchendaavenue.co.za?subject=Catering%20Enquiry" class="btn btn-email">
+          <i class="fas fa-envelope"></i> Send an Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="section-label">Get In Touch</span>
+        <h2>Let's Make Your Event Unforgettable</h2>
+        <p>Reach out via WhatsApp or email for bookings, menu consultations, pricing, and availability. We respond promptly and are happy to help plan every detail.</p>
+
+        <div class="contact-cards">
+          <a href="https://wa.me/27000000000?text=Hello%20Kitchen%20Da%20Avenue%2C%20I%20would%20like%20to%20enquire%20about%20catering." class="contact-card whatsapp-card" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>+27 00 000 0000</span>
+              <small>Instant replies — Mon to Sat, 8am–8pm</small>
+            </div>
+          </a>
+          <a href="mailto:info@kitchendaavenue.co.za?subject=Catering%20Enquiry" class="contact-card email-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <span>info@kitchendaavenue.co.za</span>
+              <small>We reply within 24 hours</small>
+            </div>
+          </a>
+          <div class="contact-card location-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Service Area</strong>
+              <span>Nationwide Coverage</span>
+              <small>Available for on-site &amp; off-site events</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3>Send Us a Message</h3>
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="+27 00 000 0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="event">Event Type *</label>
+            <select id="event" name="event" required>
+              <option value="">Select event type...</option>
+              <option>Corporate Event</option>
+              <option>Wedding</option>
+              <option>Private Party</option>
+              <option>Funeral / Memorial</option>
+              <option>Birthday Celebration</option>
+              <option>Cocktail / Networking Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guests">Estimated Guest Count</label>
+            <input type="number" id="guests" name="guests" placeholder="e.g. 50" min="1" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message / Additional Details *</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your event, preferred dates, budget, or any special requirements..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-note">* This form will open your email client pre-filled with your details.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logo.jpeg" alt="Kitchen Da Avenue" class="footer-logo" />
+        <p>Premium catering crafted with passion &amp; delivered with elegance. Your event, our excellence.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/27000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-services">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="fas fa-chevron-right"></i> Corporate Events</li>
+          <li><i class="fas fa-chevron-right"></i> Weddings</li>
+          <li><i class="fas fa-chevron-right"></i> Private Parties</li>
+          <li><i class="fas fa-chevron-right"></i> Funerals &amp; Memorials</li>
+          <li><i class="fas fa-chevron-right"></i> Cocktail Events</li>
+          <li><i class="fas fa-chevron-right"></i> Custom Menus</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <a href="https://wa.me/27000000000" class="footer-contact-item" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> +27 00 000 0000
+        </a>
+        <a href="mailto:info@kitchendaavenue.co.za" class="footer-contact-item">
+          <i class="fas fa-envelope"></i> info@kitchendaavenue.co.za
+        </a>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock"></i> Mon – Sat: 8:00am – 8:00pm
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kitchen Da Avenue. All rights reserved. | Designed by <a href="https://www.mplai.co.za" target="_blank" rel="noopener" style="color:var(--brown);text-decoration:none;font-weight:700;">MPL AI</a>.</p>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a href="https://wa.me/27000000000?text=Hello%20Kitchen%20Da%20Avenue%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-tooltip">Chat with us!</span>
+  </a>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

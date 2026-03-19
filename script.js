@@ -8,17 +8,24 @@ const backToTop = document.getElementById('backToTop');
 
 // Throttle scroll via requestAnimationFrame — prevents jank on fixed elements
 let scrollTicking = false;
+let lastScrollY = 0;
 window.addEventListener('scroll', () => {
   if (!scrollTicking) {
     requestAnimationFrame(() => {
-      if (window.scrollY > 60) {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY;
+      
+      // Hysteresis: down=60px, up=30px → prevents rapid toggle bounce
+      if (scrollingDown && currentScrollY > 60) {
         navbar.classList.add('scrolled');
         backToTop.classList.add('visible');
-      } else {
+      } else if (!scrollingDown && currentScrollY < 30) {
         navbar.classList.remove('scrolled');
         backToTop.classList.remove('visible');
       }
+      
       highlightActiveNav();
+      lastScrollY = currentScrollY;
       scrollTicking = false;
     });
     scrollTicking = true;

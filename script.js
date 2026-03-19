@@ -258,3 +258,100 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+/* ── GALLERY LIGHTBOX ─────────────────────────────────────── */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+let currentLightboxIndex = 0;
+const lightboxData = [];
+
+// Build lightbox data from gallery items
+galleryItems.forEach((item, index) => {
+  const bgImage = item.style.backgroundImage;
+  const imageUrl = bgImage.slice(5, -2); // Extract URL from url("...")
+  const caption = item.querySelector('.gallery-overlay span')?.textContent || '';
+  
+  lightboxData.push({ url: imageUrl, caption });
+  
+  // Click to open lightbox
+  item.addEventListener('click', () => {
+    openLightbox(index);
+  });
+});
+
+function openLightbox(index) {
+  currentLightboxIndex = index;
+  updateLightboxContent();
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function updateLightboxContent() {
+  const data = lightboxData[currentLightboxIndex];
+  lightboxImg.src = data.url;
+  lightboxImg.alt = data.caption;
+  lightboxCaption.textContent = data.caption;
+}
+
+function showPrevImage() {
+  currentLightboxIndex = (currentLightboxIndex - 1 + lightboxData.length) % lightboxData.length;
+  updateLightboxContent();
+}
+
+function showNextImage() {
+  currentLightboxIndex = (currentLightboxIndex + 1) % lightboxData.length;
+  updateLightboxContent();
+}
+
+// Event listeners for buttons
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxPrev.addEventListener('click', showPrevImage);
+lightboxNext.addEventListener('click', showNextImage);
+
+// Close on background click
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('active')) return;
+  
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') showPrevImage();
+  if (e.key === 'ArrowRight') showNextImage();
+});
+
+// Touch swipe support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+  const swipeThreshold = 50;
+  const diff = touchStartX - touchEndX;
+  
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) showNextImage(); // Swipe left = next
+    else showPrevImage(); // Swipe right = prev
+  }
+}

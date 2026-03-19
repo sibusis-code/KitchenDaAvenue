@@ -28,6 +28,7 @@
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
+body { overscroll-behavior-y: contain; }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -384,16 +385,17 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   top: 6px; left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(0);
   width: 4px; height: 8px;
   background: var(--white);
   border-radius: 2px;
   animation: scrollBounce 1.6s infinite;
+  will-change: transform;
 }
 
 @keyframes scrollBounce {
-  0%, 100% { top: 6px; opacity: 1; }
-  50% { top: 18px; opacity: 0.4; }
+  0%, 100% { transform: translateX(-50%) translateY(0);   opacity: 1; }
+  50%       { transform: translateX(-50%) translateY(12px); opacity: 0.4; }
 }
 
 /* ── STRIP ────────────────────────────────────────────────── */
@@ -1069,6 +1071,7 @@ ul { list-style: none; }
   transition: transform var(--transition), box-shadow var(--transition);
   will-change: transform;
   transform: translateZ(0);
+  touch-action: manipulation;
 }
 
 .float-whatsapp:hover { transform: translateZ(0) scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.55); }
@@ -1111,6 +1114,7 @@ ul { list-style: none; }
   box-shadow: var(--shadow);
   will-change: opacity;
   transform: translateZ(0);
+  touch-action: manipulation;
 }
 
 .back-to-top.visible { opacity: 1; pointer-events: all; }
@@ -1142,7 +1146,9 @@ ul { list-style: none; }
   .nav-links {
     position: fixed;
     top: 0; right: -100%;
-    width: 280px; height: 100vh;
+    width: 280px;
+    height: 100vh;
+    height: 100dvh; /* prevents resize when mobile address bar shows/hides */
     background: var(--white);
     flex-direction: column;
     justify-content: center;
@@ -1151,6 +1157,7 @@ ul { list-style: none; }
     transition: right var(--transition);
     box-shadow: -8px 0 32px rgba(0,0,0,0.12);
     z-index: 900;
+    overscroll-behavior: contain;
   }
 
   .nav-links.open { right: 0; }

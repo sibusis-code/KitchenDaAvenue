@@ -23,7 +23,7 @@ window.addEventListener('scroll', () => {
     });
     scrollTicking = true;
   }
-});
+}, { passive: true });
 
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
